@@ -10,7 +10,7 @@ exports.parse = function(file, callback) {
       calllack(new Error('file does not exist'));
     }
     
-    xlhtml = child('xlhtml',['-xml', file]);
+    var xlhtml = child('xlhtml',['-xml', file]);
 
     xlhtml.stdout.on('data', function(data) {
         xml += data;
